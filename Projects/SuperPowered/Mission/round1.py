@@ -160,10 +160,9 @@ slow_speed = 35 #slow speed to control the accuracy
 middle_reflection = 80 # used for the line follower or accurate positioning.
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 hub.motion_sensor.reset_yaw_angle()
-gyro_straight_forward_print(0,85,normal_speed)
-#left_turn_motor(10,10)
-arm_up(l_arm_motor,-120, 80)
-gyro_straight_forward_print(0,13,normal_speed)
+gyro_straight_forward_print(-3,85,normal_speed)
+arm_up(l_arm_motor,-150, 30)
+gyro_straight_forward_print(0,20,fast_speed+30)
 mm_motor = MotorPair("A","B")
-gyro_straight_forward_print(0,88,normal_speed)
-arm_up(l_arm_motor,120, 60)
+gyro_straight_forward_print(0,102,fast_speed+30)
+#arm_up(l_arm_motor,150, 60)
