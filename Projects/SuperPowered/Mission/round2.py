@@ -161,29 +161,27 @@ slow_speed = 35 #slow speed to control the accuracy
 middle_reflection = 80 # used for the line follower or accurate positioning.
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 hub.motion_sensor.reset_yaw_angle()
-gyro_straight_forward_print(0,55,normal_speed)
+gyro_straight_forward_print(0,68,normal_speed+20)
 mm_motor = MotorPair("A","B")
-gyro_straight_forward_print(0,18,normal_speed)
+gyro_straight_forward_print(0,12,normal_speed+20)
 left_turn_motor(180,50)
 mm_motor = MotorPair("B","A")
-gyro_straight_forward_print(-45,67,normal_speed)
+gyro_straight_forward_print(-45,66,normal_speed+20)
 pid_turn(45,1,40)
 #right_turn_motor(270,50)
-gyro_straight_forward_print(45,33,normal_speed)
+gyro_straight_forward_print(45,80,fast_speed)
 cnt = 0
-while (cnt < 4):
+while (cnt < 3):
     cnt = cnt + 1
     mm_motor = MotorPair("A","B")
-    gyro_straight_forward_print(45,18,normal_speed)
+    gyro_straight_forward_print(45,10,normal_speed)
     mm_motor = MotorPair("B","A")
-    gyro_straight_forward_print(45,35,fast_speed)
- 
-mm_motor = MotorPair("A","B")
-gyro_straight_forward_print(45,35,normal_speed)
+    gyro_straight_forward_print(45,80,fast_speed+10)
 
-mm_motor = MotorPair("B","A")
-gyro_straight_forward_print(45,10,normal_speed)
-pid_turn(-45,1,40)
-gyro_straight_forward_print(-45,10,normal_speed)
 mm_motor = MotorPair("A","B")
-gyro_straight_forward_print(-45,100,normal_speed)
+gyro_straight_forward_print(46,36,normal_speed)##34
+mm_motor = MotorPair("B","A")
+gyro_straight_forward_print(46,2,normal_speed)
+#gyro_straight_forward_print(45,2,normal_speed)
+left_turn_motor(240,50)
+mm_motor.move(-85,"cm",0,fast_speed)
